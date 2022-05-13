@@ -19,7 +19,7 @@ public class ReadFile {
                 //System.out.println(data);
                 boolean pass = data.matches("\\A\\p{ASCII}*\\z");
                 if(pass) {
-                    wording.add(data);
+                    array.add(data);
                 }
                 //array.add(data);
             }
