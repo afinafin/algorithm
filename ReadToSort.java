@@ -15,7 +15,11 @@ public class ReadToSort {
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 //System.out.println(data);
-                wording.add(data);
+                boolean pass = data.matches("\\A\\p{ASCII}*\\z");
+                if(pass) {
+                    wording.add(data);
+                }
+                //wording.add(data);
             }
             myReader.close();
         } catch (FileNotFoundException e) {
